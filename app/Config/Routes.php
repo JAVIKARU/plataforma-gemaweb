@@ -42,6 +42,8 @@ $routes->group('pqrs',function ($routes){
     $routes->get('buscar', 'Pqrs::BuscarPqrs');
 });
 
+
+
 /*
 * --------------------------------------------------------------------
 * RUTAS PARA LA ADMINISTRACION
@@ -55,6 +57,11 @@ $routes->group('gemaweb/usuarios',function ($routes){
 
 $routes->group('gemaweb/contrareferencia',function ($routes){
     $routes->get('/', 'Contrareferencia::index');
+});
+
+$routes->group('gemaweb/altocosto',function ($routes){
+    $routes->get('/', 'Altocosto::index');
+   
 });
 /*
  * --------------------------------------------------------------------

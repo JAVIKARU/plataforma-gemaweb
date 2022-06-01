@@ -126,6 +126,40 @@
               </router-link> -->
             </div>
           </li>
+          <!-- TICKET DE ALTO COSTO ENCARGADO RICHAD 792 -->
+          <li class="nav-item dropdown active">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <div class="media-body  d-none d-lg-block">
+                  Alto costo
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+              <a class="nav-link" href="<?= base_url(); ?>/gemaweb/contrareferencia">
+                Artristis
+              </a>
+              <!-- 
+              <router-link class="nav-link" to="/gemaweb/artitris">
+                Remisiones
+              </router-link>
+              <router-link class="nav-link" to="/gemaweb/hipertitis">
+                Hipertitis
+              </router-link>
+              <router-link class="nav-link" to="/gemaweb/erc">
+                ERC
+              </router-link>
+              <router-link class="nav-link" to="/gemaweb/hemofilia">
+                Hemofilia
+              </router-link>
+              <router-link class="nav-link" to="/gemaweb/novih">
+                No VIH
+              </router-link>
+              <router-link class="nav-link" to="/gemaweb/vih">
+                VIH
+              </router-link> -->
+            </div>
+          </li>
         </ul>
         <hr class="my-4">
         <h6 class="navbar-heading ">Documentación</h6>
