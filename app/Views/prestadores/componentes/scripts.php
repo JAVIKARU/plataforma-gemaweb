@@ -1,0 +1,1 @@
+<script src="<?= base_url();?>/js/argon-dashboard.min.js"></script>
