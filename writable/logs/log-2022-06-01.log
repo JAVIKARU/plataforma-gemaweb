@@ -465,3 +465,21 @@ CRITICAL - 2022-06-01 08:51:01 --> Undefined property: stdClass::$NOM_DIAGNOSTIC
 #7 C:\xampp\htdocs\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 C:\xampp\htdocs\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
+CRITICAL - 2022-06-01 11:49:34 --> Undefined property: App\Controllers\Pqrs::$generic
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 15)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->index()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-01 13:40:07 --> Undefined property: stdClass::$COD_DEPARTAMENTO
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Views\prestadores\pqrs.php(309): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 309)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Common.php(1089): CodeIgniter\View\View->render('prestadores/pqr...', Array, true)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(33): view('prestadores/pqr...', Array)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->index()
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

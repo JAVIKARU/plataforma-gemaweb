@@ -25,6 +25,6 @@ class Contrareferencia extends BaseController {
     }
 
     public function buscarPaciente() {
-        
+     
     }
 }

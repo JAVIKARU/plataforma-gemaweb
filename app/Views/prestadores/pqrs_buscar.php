@@ -28,16 +28,11 @@
             id="tpdocumento"
             class="form-control form-control-sm"
             required aria-label=""
-            v-model="tpdocumento"
           >
             <option value="">SELECCIONE</option>
-            <option
-            v-for="tpdocumento in tpdocumentos"
-            v-bind:value="{id: tpdocumento.TIP_DOCUMENTO, text: tpdocumento.NOM_DOCUMENTO}"
-            :key="tpdocumento.TIP_DOCUMENTO"
-            >
-              {{ tpdocumento.NOM_DOCUMENTO }}
-            </option>
+            <?php foreach($tpdocumento->getResult() as $tpdocumentos){ ?>
+              <option value="<?= $tpdocumentos->TIP_DOCUMENTO; ?>"> <?= $tpdocumentos->NOM_DOCUMENTO; ?> </option>
+            <?php } ?>
           </select>
         </div>
       </div>

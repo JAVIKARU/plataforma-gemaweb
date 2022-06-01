@@ -93,12 +93,11 @@
                         class="form-control form-control-sm"
                         required aria-label=""
                         v-model="tpdocumento"
-                        @change="mostrarExpedicion"
                       >
                        <option value="">SELECCIONE</option>
-                       <option
-                       >
-                       </option>
+                        <?php foreach($tpdocumento->getResult() as $tpdocumentos){ ?>
+                       <option value="<?= $tpdocumentos->TIP_DOCUMENTO; ?>"> <?= $tpdocumentos->NOM_DOCUMENTO; ?> </option>
+                       <?php } ?>
                      </select>
                    <div class="invalid-feedback">Ingrese el tipo de documento</div>
                  </div>
@@ -198,7 +197,6 @@
                 type="number"
                 id="edad"
                 class="form-control form-control-sm"
-                v-model="edad"
               >
             </div>
           </div>
@@ -238,12 +236,11 @@
                        id="poblacion"
                        class="form-control"
                        required aria-label=""
-                       v-model="poblacionespecial"
                       >
                        <option value="" >SELECCIONE</option>
-                       <option
-                       >
-                       </option>
+                       <?php foreach($poblacion->getResult() as $poblaciones) { ?>
+                       <option value="<?= $poblaciones->CONSECUTIVO; ?>"> <?= $poblaciones->NOMPOBLACION; ?> </option>
+                       <?php } ?>
                      </select>
                    <div class="invalid-feedback">Ingrese el tipo de población</div>
                  </div>
@@ -259,16 +256,15 @@
                        required aria-label=""
                      >
                        <option value="">SELECCIONE</option>
-                       <option
-                       >
-                         {{ grupoetnico.NOMBRE }}
-                       </option>
+                       <?php foreach($etnico->getResult() as $etnicos) { ?>
+                       <option value="<?= $etnicos->CONSECUTIVO; ?>"> <?= $etnicos->NOMBRE; ?> </option>
+                       <?php } ?>
                      </select>
                    <div class="invalid-feedback">Ingrese el grupo étnico</div>
                  </div>
                </div>
              </div>
-             <div class="col-md-3" id="cont-resguardo" hidden>
+             <div class="col-md-3" id="cont-resguardo">
                <label>Resguardo</label>
                <input
                  type="text"
@@ -276,7 +272,7 @@
                  id="resguardo"
                >
              </div>
-             <div class="col-md-3" id="cont-comunidad" hidden>
+             <div class="col-md-3" id="cont-comunidad">
                <label>Comunidad</label>
                <input
                  type="text"
@@ -308,9 +304,9 @@
                     v-model="departamento"
                   >
                     <option value="">SELECCIONE</option>
-                    <option
-                    >
-                    </option>
+                       <?php foreach($departamento->getResult() as $departamentos) { ?>
+                       <option value="<?= $departamentos->COD_DEPARTAMENTO; ?>"> <?= $departamentos->NOM_DEPARTAMENTO; ?> </option>
+                       <?php } ?>
                   </select>
                 </div>
               </div>
@@ -323,9 +319,9 @@
                     v-model="municipio"
                   >
                     <option value="">SELECCIONE</option>
-                    <option
-                    >
-                    </option>
+                      <?php foreach($ciudad->getResult() as $ciudades) { ?>
+                        <option value="<?= $ciudades->COD_CIUDAD; ?>"> <?= $ciudades->NOM_CIUDAD; ?> </option>
+                      <?php } ?>
                   </select>
                 </div>
               </div>
@@ -338,9 +334,9 @@
                     v-model="zona"
                   >
                     <option value="">SELECCIONE</option>
-                    <option
-                    >
-                    </option>
+                    <?php foreach($zona->getResult() as $zonas) { ?>
+                      <option value="<?= $zonas->COD_ZONA; ?>"> <?= $zonas->NOM_ZONA; ?> </option>
+                    <?php } ?>
                   </select>
                 </div>
               </div>
@@ -431,7 +427,7 @@
                     </div>
                 </div>
               </div>
-              <div class="col-md-9 eps" hidden>
+              <div class="col-md-9 eps" >
                 <div class="form-group">
                   <label>Área  a la que remite la PQRD</label>
                   <select
@@ -440,13 +436,13 @@
                     required aria-label=""
                   >
                     <option value="">SELECCIONE</option>
-                    <option
-                    >
-                    </option>
+                    <?php foreach($area->getResult() as $areas) { ?>
+                    <option value="<?= $areas->COD_AREA; ?>"> <?= $areas->NOM_AREA; ?> </option>
+                    <?php } ?>
                   </select>
                 </div>
               </div>
-              <div class="col-md-9 ips" hidden>
+              <div class="col-md-9 ips" >
                 <div class="form-group">
                   <label>Prestador de servicio</label>
                   <select
@@ -455,9 +451,9 @@
                     required aria-label=""
                   >
                     <option value="">SELECCIONE</option>
-                    <option
-                    >
-                    </option>
+                    <?php foreach($prestador->getResult() as $prestadores) { ?>
+                    <option value="<?= $prestadores->NIT_PRESTADOR; ?>"><?= $prestadores->NOM_PRESTADOR; ?></option>
+                    <?php } ?>
                   </select>
                 </div>
               </div>
