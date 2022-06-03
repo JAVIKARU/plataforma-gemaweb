@@ -103,7 +103,7 @@ function foo() {}
             $annotations = $doc->getAnnotationsOfType($this->configuration['annotations']);
 
             // nothing to do if there are no annotations
-            if (0 === \count($annotations)) {
+            if (empty($annotations)) {
                 continue;
             }
 

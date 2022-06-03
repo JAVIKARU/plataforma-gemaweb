@@ -85,7 +85,7 @@ final class PhpdocOrderFixer extends AbstractFixer
             // move param to start, return to end, leave throws in the middle
             $content = $this->moveParamAnnotations($content);
             // we're parsing the content again to make sure the internal
-            // state of the docblock is correct after the modifications
+            // state of the dockblock is correct after the modifications
             $content = $this->moveReturnAnnotations($content);
             // persist the content at the end
             $tokens[$index] = new Token([T_DOC_COMMENT, $content]);
@@ -101,13 +101,13 @@ final class PhpdocOrderFixer extends AbstractFixer
         $params = $doc->getAnnotationsOfType('param');
 
         // nothing to do if there are no param annotations
-        if (0 === \count($params)) {
+        if (empty($params)) {
             return $content;
         }
 
         $others = $doc->getAnnotationsOfType(['throws', 'return']);
 
-        if (0 === \count($others)) {
+        if (empty($others)) {
             return $content;
         }
 
@@ -137,14 +137,14 @@ final class PhpdocOrderFixer extends AbstractFixer
         $returns = $doc->getAnnotationsOfType('return');
 
         // nothing to do if there are no return annotations
-        if (0 === \count($returns)) {
+        if (empty($returns)) {
             return $content;
         }
 
         $others = $doc->getAnnotationsOfType(['param', 'throws']);
 
         // nothing to do if there are no other annotations
-        if (0 === \count($others)) {
+        if (empty($others)) {
             return $content;
         }
 

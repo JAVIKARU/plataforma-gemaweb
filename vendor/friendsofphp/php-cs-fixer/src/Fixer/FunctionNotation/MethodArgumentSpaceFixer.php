@@ -124,7 +124,7 @@ SAMPLE
      * {@inheritdoc}
      *
      * Must run before ArrayIndentationFixer.
-     * Must run after BracesFixer, CombineNestedDirnameFixer, FunctionDeclarationFixer, ImplodeCallFixer, MethodChainingIndentationFixer, NoMultilineWhitespaceAroundDoubleArrowFixer, NoUselessSprintfFixer, PowToExponentiationFixer, StrictParamFixer.
+     * Must run after BracesFixer, CombineNestedDirnameFixer, FunctionDeclarationFixer, ImplodeCallFixer, MethodChainingIndentationFixer, NoUselessSprintfFixer, PowToExponentiationFixer.
      */
     public function getPriority(): int
     {
@@ -303,7 +303,11 @@ SAMPLE
 
         $content = Preg::replace('/\R\h*/', '', $tokens[$index]->getContent());
 
-        $tokens->ensureWhitespaceAtIndex($index, 0, $content);
+        if ('' !== $content) {
+            $tokens[$index] = new Token([T_WHITESPACE, $content]);
+        } else {
+            $tokens->clearAt($index);
+        }
 
         return true;
     }

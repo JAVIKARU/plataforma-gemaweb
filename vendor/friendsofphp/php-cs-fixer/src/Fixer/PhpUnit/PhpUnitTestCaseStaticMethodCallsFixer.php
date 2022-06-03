@@ -426,7 +426,6 @@ final class MyTest extends \PHPUnit_Framework_TestCase
                 // do not change `self` to `this` in static methods
                 if ('this' === $callType) {
                     $attributes = $analyzer->getMethodAttributes($index);
-
                     if (false !== $attributes['static']) {
                         $index = $this->findEndOfNextBlock($tokens, $index);
 
@@ -440,7 +439,6 @@ final class MyTest extends \PHPUnit_Framework_TestCase
             }
 
             $nextIndex = $tokens->getNextMeaningfulToken($index);
-
             if (!$tokens[$nextIndex]->equals('(')) {
                 $index = $nextIndex;
 
@@ -459,7 +457,6 @@ final class MyTest extends \PHPUnit_Framework_TestCase
 
             $operatorIndex = $tokens->getPrevMeaningfulToken($index);
             $referenceIndex = $tokens->getPrevMeaningfulToken($operatorIndex);
-
             if (!$this->needsConversion($tokens, $index, $referenceIndex, $callType)) {
                 continue;
             }

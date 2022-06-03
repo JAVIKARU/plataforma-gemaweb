@@ -81,7 +81,7 @@ function foo ($bar) {}
             $doc = new DocBlock($token->getContent());
             $annotations = $doc->getAnnotations();
 
-            if (0 === \count($annotations)) {
+            if (empty($annotations)) {
                 continue;
             }
 
@@ -120,7 +120,11 @@ function foo ($bar) {}
                 $content = Preg::replaceCallback(
                     '/^(\s*\*\s*@\w+\s+'.$optionalTypeRegEx.')(\p{Lu}?(?=\p{Ll}|\p{Zs}))(.*)$/',
                     static function (array $matches): string {
-                        return $matches[1].mb_strtolower($matches[2]).$matches[3];
+                        if (\function_exists('mb_strtolower')) {
+                            return $matches[1].mb_strtolower($matches[2]).$matches[3];
+                        }
+
+                        return $matches[1].strtolower($matches[2]).$matches[3];
                     },
                     $startLine->getContent(),
                     1

@@ -163,7 +163,6 @@ final class EregToPregFixer extends AbstractFixer
     {
         // try to find something that's not used
         $delimiters = [];
-
         foreach (self::$delimiters as $k => $d) {
             if (!str_contains($pattern, $d)) {
                 return $d;
@@ -172,7 +171,7 @@ final class EregToPregFixer extends AbstractFixer
             $delimiters[$d] = [substr_count($pattern, $d), $k];
         }
 
-        // return the least used delimiter, using the position in the list as a tiebreaker
+        // return the least used delimiter, using the position in the list as a tie breaker
         uasort($delimiters, static function (array $a, array $b): int {
             if ($a[0] === $b[0]) {
                 return $a[1] <=> $b[1];

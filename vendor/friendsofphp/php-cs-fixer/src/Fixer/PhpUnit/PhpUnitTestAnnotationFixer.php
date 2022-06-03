@@ -167,7 +167,7 @@ public function testItDoesSomething() {}}'.$this->whitespacesConfig->getLineEndi
 
     private function isTestMethod(Tokens $tokens, int $index): bool
     {
-        // Check if we are dealing with a (non-abstract, non-lambda) function
+        // Check if we are dealing with a (non abstract, non lambda) function
         if (!$this->isMethod($tokens, $index)) {
             return false;
         }
@@ -408,6 +408,6 @@ public function testItDoesSomething() {}}'.$this->whitespacesConfig->getLineEndi
 
     private function doesDocBlockContainTest(DocBlock $doc): bool
     {
-        return 0 !== \count($doc->getAnnotationsOfType('test'));
+        return !empty($doc->getAnnotationsOfType('test'));
     }
 }

@@ -94,7 +94,6 @@ class Foo
 
             // is it inside a namespace?
             $nspIndex = $tokens->getPrevTokenOfKind($index, [[T_NAMESPACE, 'namespace']]);
-
             if (null !== $nspIndex) {
                 $nspIndex = $tokens->getNextMeaningfulToken($nspIndex);
 
@@ -147,11 +146,13 @@ class Foo
         $php4 = $this->findFunction($tokens, $className, $classStart, $classEnd);
 
         if (null === $php4) {
-            return; // no PHP4-constructor!
+            // no PHP4-constructor!
+            return;
         }
 
         if (!empty($php4['modifiers'][T_ABSTRACT]) || !empty($php4['modifiers'][T_STATIC])) {
-            return; // PHP4 constructor can't be abstract or static
+            // PHP4 constructor can't be abstract or static
+            return;
         }
 
         $php5 = $this->findFunction($tokens, '__construct', $classStart, $classEnd);
@@ -189,7 +190,6 @@ class Foo
                 for ($i = $php5['startIndex']; $i <= $php5['endIndex']; ++$i) {
                     $tokens->clearAt($i);
                 }
-
                 // rename the PHP4 one to __construct
                 $tokens[$php4['nameIndex']] = new Token([T_STRING, '__construct']);
 

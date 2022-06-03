@@ -142,7 +142,6 @@ function bar($foo) {}
                 }
 
                 $byRefIndex = $tokens->getPrevMeaningfulToken($variableIndex);
-
                 if ($tokens[$byRefIndex]->equals('&')) {
                     $variableIndex = $byRefIndex;
                 }
@@ -173,7 +172,6 @@ function bar($foo) {}
             }
 
             $variableName = $tokens[$index]->getContent();
-
             if ($paramTypeAnnotation->getVariableName() === $variableName) {
                 return $index;
             }

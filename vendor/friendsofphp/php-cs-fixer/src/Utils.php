@@ -41,7 +41,7 @@ final class Utils
      */
     public static function camelCaseToUnderscore(string $string): string
     {
-        return mb_strtolower(Preg::replace('/(?<!^)((?=[\p{Lu}][^\p{Lu}])|(?<![\p{Lu}])(?=[\p{Lu}]))/', '_', $string));
+        return strtolower(Preg::replace('/(?<!^)((?=[A-Z][^A-Z])|(?<![A-Z])(?=[A-Z]))/', '_', $string));
     }
 
     /**
@@ -130,7 +130,7 @@ final class Utils
      */
     public static function naturalLanguageJoinWithBackticks(array $names): string
     {
-        if (0 === \count($names)) {
+        if (empty($names)) {
             throw new \InvalidArgumentException('Array of names cannot be empty.');
         }
 

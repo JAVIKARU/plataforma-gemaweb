@@ -81,7 +81,9 @@ final class NativeFunctionTypeDeclarationCasingFixer extends AbstractFixer
             ]
         );
 
-        $this->hints = array_merge($this->hints, ['object' => true]);
+        if (\PHP_VERSION_ID >= 70200) {
+            $this->hints = array_merge($this->hints, ['object' => true]);
+        }
 
         if (\PHP_VERSION_ID >= 80000) {
             $this->hints = array_merge($this->hints, ['static' => true]);

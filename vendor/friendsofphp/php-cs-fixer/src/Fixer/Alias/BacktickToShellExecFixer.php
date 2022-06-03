@@ -75,7 +75,6 @@ EOT
         $backtickTokens = [];
         for ($index = $tokens->count() - 1; $index > 0; --$index) {
             $token = $tokens[$index];
-
             if (!$token->equals('`')) {
                 if ($backtickStarted) {
                     $backtickTokens[$index] = $token;
@@ -85,12 +84,10 @@ EOT
             }
 
             $backtickTokens[$index] = $token;
-
             if ($backtickStarted) {
                 $this->fixBackticks($tokens, $backtickTokens);
                 $backtickTokens = [];
             }
-
             $backtickStarted = !$backtickStarted;
         }
     }
@@ -120,18 +117,15 @@ EOT
             new Token([T_STRING, 'shell_exec']),
             new Token('('),
         ];
-
         if (1 !== $count) {
             $newTokens[] = new Token('"');
         }
-
         foreach ($backtickTokens as $token) {
             if (!$token->isGivenKind(T_ENCAPSED_AND_WHITESPACE)) {
                 $newTokens[] = $token;
 
                 continue;
             }
-
             $content = $token->getContent();
             // Escaping special chars depends on the context: too tricky
             if (Preg::match('/[`"\']/u', $content)) {
@@ -139,7 +133,6 @@ EOT
             }
 
             $kind = T_ENCAPSED_AND_WHITESPACE;
-
             if (1 === $count) {
                 $content = '"'.$content.'"';
                 $kind = T_CONSTANT_ENCAPSED_STRING;
@@ -147,11 +140,9 @@ EOT
 
             $newTokens[] = new Token([$kind, $content]);
         }
-
         if (1 !== $count) {
             $newTokens[] = new Token('"');
         }
-
         $newTokens[] = new Token(')');
 
         $tokens->overrideRange($openingBacktickIndex, $closingBacktickIndex, $newTokens);

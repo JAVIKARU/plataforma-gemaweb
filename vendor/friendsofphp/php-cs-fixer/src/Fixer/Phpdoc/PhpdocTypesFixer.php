@@ -23,7 +23,6 @@ use PhpCsFixer\FixerConfiguration\FixerOptionBuilder;
 use PhpCsFixer\FixerDefinition\CodeSample;
 use PhpCsFixer\FixerDefinition\FixerDefinition;
 use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
-use PhpCsFixer\Preg;
 
 /**
  * @author Graham Campbell <hello@gjcampbell.co.uk>
@@ -36,7 +35,7 @@ final class PhpdocTypesFixer extends AbstractPhpdocTypesFixer implements Configu
      *
      * @var array<string,string[]>
      */
-    private const POSSIBLE_TYPES = [
+    private static $possibleTypes = [
         'simple' => [
             'array',
             'bool',
@@ -70,9 +69,9 @@ final class PhpdocTypesFixer extends AbstractPhpdocTypesFixer implements Configu
     ];
 
     /**
-     * @var string
+     * @var array string[]
      */
-    private $patternToFix = '';
+    private $typesToFix = [];
 
     /**
      * {@inheritdoc}
@@ -81,22 +80,9 @@ final class PhpdocTypesFixer extends AbstractPhpdocTypesFixer implements Configu
     {
         parent::configure($configuration);
 
-        $typesToFix = array_merge(...array_map(static function (string $group): array {
-            return self::POSSIBLE_TYPES[$group];
+        $this->typesToFix = array_merge(...array_map(static function (string $group): array {
+            return self::$possibleTypes[$group];
         }, $this->configuration['groups']));
-
-        $this->patternToFix = sprintf(
-            '/(?<![a-zA-Z0-9_\x80-\xff]\\\\)(\b|.(?=\$))(%s)\b(?!\\\\)/i',
-            implode(
-                '|',
-                array_map(
-                    static function (string $type): string {
-                        return preg_quote($type, '/');
-                    },
-                    $typesToFix
-                )
-            )
-        );
     }
 
     /**
@@ -154,13 +140,9 @@ final class PhpdocTypesFixer extends AbstractPhpdocTypesFixer implements Configu
      */
     protected function normalize(string $type): string
     {
-        return Preg::replaceCallback(
-            $this->patternToFix,
-            function (array $matches): string {
-                return strtolower($matches[0]);
-            },
-            $type
-        );
+        $lower = strtolower($type);
+
+        return \in_array($lower, $this->typesToFix, true) ? $lower : $type;
     }
 
     /**
@@ -168,7 +150,7 @@ final class PhpdocTypesFixer extends AbstractPhpdocTypesFixer implements Configu
      */
     protected function createConfigurationDefinition(): FixerConfigurationResolverInterface
     {
-        $possibleGroups = array_keys(self::POSSIBLE_TYPES);
+        $possibleGroups = array_keys(self::$possibleTypes);
 
         return new FixerConfigurationResolver([
             (new FixerOptionBuilder('groups', 'Type groups to fix.'))

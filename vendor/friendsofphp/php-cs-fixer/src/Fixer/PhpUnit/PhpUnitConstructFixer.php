@@ -96,7 +96,7 @@ final class FooTest extends \PHPUnit_Framework_TestCase {
      */
     public function getPriority(): int
     {
-        return -8;
+        return -10;
     }
 
     /**
@@ -183,7 +183,6 @@ final class FooTest extends \PHPUnit_Framework_TestCase {
         }
 
         $sequenceIndexes = array_keys($sequence);
-
         if (!$functionsAnalyzer->isTheSameClassCall($tokens, $sequenceIndexes[0])) {
             return null;
         }

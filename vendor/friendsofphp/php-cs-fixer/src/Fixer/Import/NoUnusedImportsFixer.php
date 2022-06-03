@@ -49,7 +49,7 @@ final class NoUnusedImportsFixer extends AbstractFixer
      * {@inheritdoc}
      *
      * Must run before BlankLineAfterNamespaceFixer, NoExtraBlankLinesFixer, NoLeadingImportSlashFixer, SingleLineAfterImportsFixer.
-     * Must run after ClassKeywordRemoveFixer, GlobalNamespaceImportFixer, PhpUnitDedicateAssertFixer, PhpUnitFqcnAnnotationFixer, SingleImportPerStatementFixer.
+     * Must run after ClassKeywordRemoveFixer, GlobalNamespaceImportFixer, PhpUnitFqcnAnnotationFixer, SingleImportPerStatementFixer.
      */
     public function getPriority(): int
     {
@@ -232,7 +232,11 @@ final class NoUnusedImportsFixer extends AbstractFixer
         if ($prevToken->isWhitespace()) {
             $content = rtrim($prevToken->getContent(), " \t");
 
-            $tokens->ensureWhitespaceAtIndex($prevIndex, 0, $content);
+            if ('' === $content) {
+                $tokens->clearAt($prevIndex);
+            } else {
+                $tokens[$prevIndex] = new Token([T_WHITESPACE, $content]);
+            }
 
             $prevToken = $tokens[$prevIndex];
         }
@@ -257,7 +261,11 @@ final class NoUnusedImportsFixer extends AbstractFixer
                 1
             );
 
-            $tokens->ensureWhitespaceAtIndex($nextIndex, 0, $content);
+            if ('' !== $content) {
+                $tokens[$nextIndex] = new Token([T_WHITESPACE, $content]);
+            } else {
+                $tokens->clearAt($nextIndex);
+            }
 
             $nextToken = $tokens[$nextIndex];
         }
@@ -265,7 +273,11 @@ final class NoUnusedImportsFixer extends AbstractFixer
         if ($prevToken->isWhitespace() && $nextToken->isWhitespace()) {
             $content = $prevToken->getContent().$nextToken->getContent();
 
-            $tokens->ensureWhitespaceAtIndex($nextIndex, 0, $content);
+            if ('' !== $content) {
+                $tokens[$nextIndex] = new Token([T_WHITESPACE, $content]);
+            } else {
+                $tokens->clearAt($nextIndex);
+            }
 
             $tokens->clearAt($prevIndex);
         }

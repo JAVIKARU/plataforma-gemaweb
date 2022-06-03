@@ -19,6 +19,8 @@ namespace PhpCsFixer\RuleSet;
  */
 interface RuleSetDescriptionInterface
 {
+    public function __construct();
+
     public function getDescription(): string;
 
     public function getName(): string;

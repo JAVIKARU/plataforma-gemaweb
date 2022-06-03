@@ -714,7 +714,7 @@ $array = [
                 }
 
                 if (self::ALIGN !== $alignStrategy) {
-                    // move placeholders to match strategy
+                    // move place holders to match strategy
                     foreach ($group as $index) {
                         $currentPosition = strpos($lines[$index], $placeholder);
                         $before = substr($lines[$index], 0, $currentPosition);

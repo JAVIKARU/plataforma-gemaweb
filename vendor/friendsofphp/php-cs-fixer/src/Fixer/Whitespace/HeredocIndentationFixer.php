@@ -25,7 +25,6 @@ use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
 use PhpCsFixer\FixerDefinition\VersionSpecification;
 use PhpCsFixer\FixerDefinition\VersionSpecificCodeSample;
 use PhpCsFixer\Preg;
-use PhpCsFixer\Tokenizer\Analyzer\WhitespacesAnalyzer;
 use PhpCsFixer\Tokenizer\Token;
 use PhpCsFixer\Tokenizer\Tokens;
 
@@ -120,7 +119,7 @@ SAMPLE
 
     private function fixIndentation(Tokens $tokens, int $start, int $end): void
     {
-        $indent = WhitespacesAnalyzer::detectIndent($tokens, $start);
+        $indent = $this->getIndentAt($tokens, $start);
 
         if ('start_plus_one' === $this->configuration['indentation']) {
             $indent .= $this->whitespacesConfig->getIndent();
@@ -171,5 +170,26 @@ SAMPLE
         }
 
         $tokens[$index] = new Token([T_ENCAPSED_AND_WHITESPACE, $content]);
+    }
+
+    private function getIndentAt(Tokens $tokens, int $index): string
+    {
+        for (; $index >= 0; --$index) {
+            if (!$tokens[$index]->isGivenKind([T_WHITESPACE, T_INLINE_HTML, T_OPEN_TAG])) {
+                continue;
+            }
+
+            $content = $tokens[$index]->getContent();
+
+            if ($tokens[$index]->isWhitespace() && $tokens[$index - 1]->isGivenKind(T_OPEN_TAG)) {
+                $content = $tokens[$index - 1]->getContent().$content;
+            }
+
+            if (1 === Preg::match('/\R(\h*)$/', $content, $matches)) {
+                return $matches[1];
+            }
+        }
+
+        return '';
     }
 }

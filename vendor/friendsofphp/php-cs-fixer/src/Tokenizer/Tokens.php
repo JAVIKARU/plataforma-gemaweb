@@ -843,7 +843,8 @@ class Tokens extends \SplFixedArray
     {
         $itemsCount = 0;
         foreach ($slices as $slice) {
-            $itemsCount += \is_array($slice) || $slice instanceof self ? \count($slice) : 1;
+            $slice = \is_array($slice) || $slice instanceof self ? $slice : [$slice];
+            $itemsCount += \count($slice);
         }
 
         if (0 === $itemsCount) {
@@ -1165,8 +1166,8 @@ class Tokens extends \SplFixedArray
             $tokenToCheck = $this[$whitespaceIndex];
 
             // if the token candidate to remove is preceded by single line comment we do not consider the new line after this comment as part of T_WHITESPACE
-            if (isset($this[$whitespaceIndex - 1]) && $this[$whitespaceIndex - 1]->isComment() && !str_starts_with($this[$whitespaceIndex - 1]->getContent(), '/*')) {
-                [, $newContent, $whitespacesToCheck] = Preg::split('/^(\R)/', $this[$whitespaceIndex]->getContent(), -1, PREG_SPLIT_DELIM_CAPTURE);
+            if (isset($this[$whitespaceIndex - 1]) && $this[$whitespaceIndex - 1]->isComment() && '/*' !== substr($this[$whitespaceIndex - 1]->getContent(), 0, 2)) {
+                [$emptyString, $newContent, $whitespacesToCheck] = Preg::split('/^(\R)/', $this[$whitespaceIndex]->getContent(), -1, PREG_SPLIT_DELIM_CAPTURE);
 
                 if ('' === $whitespacesToCheck) {
                     return;

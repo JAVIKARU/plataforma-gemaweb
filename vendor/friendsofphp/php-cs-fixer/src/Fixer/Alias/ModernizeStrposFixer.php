@@ -143,14 +143,7 @@ if (strpos($haystack, $needle) === false) {}
             $tokens->clearTokenAndMergeSurroundingWhitespace($functionIndex);
 
             if ($replacement['negate']) {
-                $negateInsertIndex = $functionIndex;
-
-                $prevFunctionIndex = $tokens->getPrevMeaningfulToken($functionIndex);
-                if ($tokens[$prevFunctionIndex]->isGivenKind(T_NS_SEPARATOR)) {
-                    $negateInsertIndex = $prevFunctionIndex;
-                }
-
-                $tokens->insertAt($negateInsertIndex, new Token('!'));
+                $tokens->insertAt($functionIndex, new Token('!'));
                 ++$functionIndex;
             }
 

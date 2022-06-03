@@ -151,7 +151,7 @@ final class PowToExponentiationFixer extends AbstractFunctionReferenceFixer
 
         $added = 0;
 
-        // check if the arguments need to be wrapped in parentheses
+        // check if the arguments need to be wrapped in parenthesis
         foreach (array_reverse($arguments, true) as $argumentStartIndex => $argumentEndIndex) {
             if ($this->isParenthesisNeeded($tokens, $argumentStartIndex, $argumentEndIndex)) {
                 $tokens->insertAt($argumentEndIndex + 1, new Token(')'));

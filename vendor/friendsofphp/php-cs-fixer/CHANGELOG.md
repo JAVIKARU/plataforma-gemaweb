@@ -3,59 +3,6 @@ CHANGELOG for PHP CS Fixer
 
 This file contains changelogs for stable releases only.
 
-Changelog for v3.4.0
---------------------
-
-* bug #6117 SingleSpaceAfterConstruct - handle before destructuring close brace (liquid207)
-* bug #6122 NoMultilineWhitespaceAroundDoubleArrowFixer - must run before MethodArgumentSpaceFixer (kubawerlos)
-* bug #6130 StrictParamFixer - must run before MethodArgumentSpaceFixer (kubawerlos)
-* bug #6137 NewWithBracesFixer - must run before ClassDefinitionFixer (kubawerlos)
-* bug #6139 PhpdocLineSpanFixer - must run before NoSuperfluousPhpdocTagsFixer (kubawerlos)
-* bug #6143 OperatorLinebreakFixer - fix for alternative syntax (kubawerlos)
-* bug #6159 ImportTransformer - fix for grouped constant and function imports (kubawerlos)
-* bug #6161 NoUnreachableDefaultArgumentValueFixer - fix for attributes (kubawerlos)
-* feature #5776 DX: test on PHP 8.1 (kubawerlos)
-* feature #6152 PHP8.1 support (SpacePossum)
-* minor #6095 Allow Symfony 6 (derrabus, keradus)
-* minor #6107 Drop support of PHPUnit v7 dependency (keradus)
-* minor #6109 Add return type to `DummyTestSplFileInfo::getRealPath()` (derrabus)
-* minor #6115 Remove PHP 7.2 polyfill (derrabus)
-* minor #6116 CI: remove installation of mbstring polyfill in build script, it's required dependency now (keradus)
-* minor #6119 OrderedClassElementsFixer - PHPUnit assert(Pre|Post)Conditions methods support (meyerbaptiste)
-* minor #6121 Use Tokens::ensureWhitespaceAtIndex to simplify code (kubawerlos)
-* minor #6127 Remove 2nd parameter to XdebugHandler constructor (phil-davis)
-* minor #6129 clean ups (SpacePossum)
-* minor #6138 PHP8.1 - toString cannot return type hint void (SpacePossum)
-* minor #6146 PHP 8.1: add new_in_initializers to PHP 8.1 integration test (keradus)
-* minor #6147 DX: update composer-normalize (keradus)
-* minor #6156 DX: drop hack for Prophecy incompatibility (keradus)
-
-Changelog for v3.3.1
---------------------
-
-* minor #6067 Bump minimum PHP version to 7.2 (keradus)
-
-Changelog for v3.3.0
---------------------
-
-* bug #6054 Utils - Add multibyte and UTF-8 support (paulbalandan)
-* bug #6061 ModernizeStrposFixer - fix for negated with leading slash (kubawerlos)
-* bug #6064 SquareBraceTransformer - fix detect array destructing in foreach (SpacePossum)
-* bug #6082 PhpUnitDedicateAssertFixer must run before NoUnusedImportsFixer (kubawerlos)
-* bug #6089 TokensAnalyzer.php - Fix T_ENCAPSED_AND_WHITESPACE handling in isBina… (SpacePossum)
-* feature #5123 PhpdocTypesFixer - support generic types (kubawerlos)
-* minor #5775 DX: run static code analysis on PHP 8.0 (kubawerlos)
-* minor #6050 DX: TypeIntersectionTransformer - prove to not touch T_AMPERSAND_FOLLOWED_BY_VAR_OR_VARARG (keradus)
-* minor #6051 NoExtraBlankLinesFixer - Improve deprecation message (paulbalandan)
-* minor #6060 DX: Add upgrade guide link when next Major is available (keradus)
-* minor #6066 Clean ups (SpacePossum, kubawerlos)
-* minor #6069 DX: cleanup stub file (keradus)
-* minor #6070 Update UPGRADE-v3.md with php_unit_test_annotation/case deprecation (kubawerlos)
-* minor #6072 Update usage doc to reflect change to PSR12 default. (hannob, keradus)
-* minor #6084 Change: Remove __constructor() from RuleSetDescriptionInterface (niklam)
-* minor #6085 Dx: reuse WhitespacesAnalyzer::detectIndent (kubawerlos)
-* minor #6087 AbstractProxyFixer - more tests (SpacePossum)
-
 Changelog for v3.2.1
 ---------------------
 
@@ -344,11 +291,6 @@ Changelog for v3.0.0
 * minor #5656 DX: mark some constants as internal or private (keradus)
 * minor #5657 DX: convert some properties to constants (keradus)
 * minor #5669 Remove TrailingCommaInMultilineArrayFixer (kubawerlos, keradus)
-
-Changelog for v2.19.3
----------------------
-
-* minor #6060 DX: Add upgrade guide link when next Major is available (keradus)
 
 Changelog for v2.19.2
 ---------------------

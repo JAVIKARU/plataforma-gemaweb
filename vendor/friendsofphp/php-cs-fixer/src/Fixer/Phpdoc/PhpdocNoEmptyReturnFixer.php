@@ -88,12 +88,12 @@ function foo() {}
             $doc = new DocBlock($token->getContent());
             $annotations = $doc->getAnnotationsOfType('return');
 
-            if (0 === \count($annotations)) {
+            if (empty($annotations)) {
                 continue;
             }
 
             foreach ($annotations as $annotation) {
-                $this->fixAnnotation($annotation);
+                $this->fixAnnotation($doc, $annotation);
             }
 
             $newContent = $doc->getContent();
@@ -113,9 +113,9 @@ function foo() {}
     }
 
     /**
-     * Remove `return void` or `return null` annotations.
+     * Remove return void or return null annotations..
      */
-    private function fixAnnotation(Annotation $annotation): void
+    private function fixAnnotation(DocBlock $doc, Annotation $annotation): void
     {
         $types = $annotation->getNormalizedTypes();
 

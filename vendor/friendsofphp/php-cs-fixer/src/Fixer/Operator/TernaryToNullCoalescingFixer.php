@@ -65,7 +65,6 @@ final class TernaryToNullCoalescingFixer extends AbstractFixer
     protected function applyFix(\SplFileInfo $file, Tokens $tokens): void
     {
         $issetIndexes = array_keys($tokens->findGivenKind(T_ISSET));
-
         while ($issetIndex = array_pop($issetIndexes)) {
             $this->fixIsset($tokens, $issetIndex);
         }
@@ -77,7 +76,6 @@ final class TernaryToNullCoalescingFixer extends AbstractFixer
     private function fixIsset(Tokens $tokens, int $index): void
     {
         $prevTokenIndex = $tokens->getPrevMeaningfulToken($index);
-
         if ($this->isHigherPrecedenceAssociativityOperator($tokens[$prevTokenIndex])) {
             return;
         }
@@ -86,14 +84,12 @@ final class TernaryToNullCoalescingFixer extends AbstractFixer
         $endBraceIndex = $tokens->findBlockEnd(Tokens::BLOCK_TYPE_PARENTHESIS_BRACE, $startBraceIndex);
 
         $ternaryQuestionMarkIndex = $tokens->getNextMeaningfulToken($endBraceIndex);
-
         if (!$tokens[$ternaryQuestionMarkIndex]->equals('?')) {
             return; // we are not in a ternary operator
         }
 
         // search what is inside the isset()
         $issetTokens = $this->getMeaningfulSequence($tokens, $startBraceIndex, $endBraceIndex);
-
         if ($this->hasChangingContent($issetTokens)) {
             return; // some weird stuff inside the isset
         }
@@ -111,7 +107,6 @@ final class TernaryToNullCoalescingFixer extends AbstractFixer
         // preserve comments and spaces
         $comments = [];
         $commentStarted = false;
-
         for ($loopIndex = $index; $loopIndex < $ternaryFirstOperandIndex; ++$loopIndex) {
             if ($tokens[$loopIndex]->isComment()) {
                 $comments[] = $tokens[$loopIndex];
@@ -139,10 +134,8 @@ final class TernaryToNullCoalescingFixer extends AbstractFixer
     {
         $sequence = [];
         $index = $start;
-
         while ($index < $end) {
             $index = $tokens->getNextMeaningfulToken($index);
-
             if ($index >= $end || null === $index) {
                 break;
             }
