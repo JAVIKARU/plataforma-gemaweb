@@ -7,7 +7,7 @@
     <title>Pqrs / Crear</title>
     <?php require_once('componentes/head.php'); ?>
   </head>
-<body>
+<body style="background-color: white ;">
 <div class="container">
   <div class="row mt-4">
     <div class="col-md-12">
@@ -40,7 +40,6 @@
                   class="form-control form-control-sm text-uppercase"
                   required aria-label=""
                   id="pqrs"
-                  v-model="pqrs"
                 >
                   <option value="">SELECCIONE</option>
                   <option value="PETICION">Petición</option>
@@ -63,7 +62,6 @@
               id="paciente_rad"
               name="paciente_rad"
               value="1" required
-              v-model="paciente_rad"
             >
             <label class="form-check-label" for="validationFormCheck2">Si</label>
           </div>
@@ -92,7 +90,6 @@
                         id="tpdocumento"
                         class="form-control form-control-sm"
                         required aria-label=""
-                        v-model="tpdocumento"
                       >
                        <option value="">SELECCIONE</option>
                         <?php foreach($tpdocumento->getResult() as $tpdocumentos){ ?>
@@ -118,7 +115,7 @@
                  </div>
                </div>
              </div>
-             <div class="col-md-4 fexpedicion"  hidden>
+             <div class="col-md-4 fexpedicion" hidden>
                  <div class="form-group">
                    <label>Expedición de su documento </label>
                    <input
@@ -134,7 +131,7 @@
                </div>
              </div>
              <div class="col-md-1 mt-2">
-               <button class="btn btn-primary btn-sm mt-4" >Consultar</button>
+               <button class="btn btn-primary btn-sm mt-4" id="consultar">Consultar</button>
              </div>
            </div>
           <div class="row mt-2">
@@ -264,7 +261,7 @@
                  </div>
                </div>
              </div>
-             <div class="col-md-3" id="cont-resguardo">
+             <div class="col-md-3" id="cont-resguardo" hidden>
                <label>Resguardo</label>
                <input
                  type="text"
@@ -272,7 +269,7 @@
                  id="resguardo"
                >
              </div>
-             <div class="col-md-3" id="cont-comunidad">
+             <div class="col-md-3" id="cont-comunidad" hidden>
                <label>Comunidad</label>
                <input
                  type="text"
@@ -331,7 +328,6 @@
                   <select
                     id="zona"
                     class="form-control form-control-sm"
-                    v-model="zona"
                   >
                     <option value="">SELECCIONE</option>
                     <?php foreach($zona->getResult() as $zonas) { ?>
@@ -427,7 +423,7 @@
                     </div>
                 </div>
               </div>
-              <div class="col-md-9 eps" >
+              <div class="col-md-9 eps" hidden>
                 <div class="form-group">
                   <label>Área  a la que remite la PQRD</label>
                   <select
@@ -442,7 +438,7 @@
                   </select>
                 </div>
               </div>
-              <div class="col-md-9 ips" >
+              <div class="col-md-9 ips" hidden>
                 <div class="form-group">
                   <label>Prestador de servicio</label>
                   <select
@@ -508,8 +504,6 @@
                   id="terminos"
                   name="terminos"
                   required
-                  v-model="terminos"
-                  @change="aceptarTerminos"
                 >
                 <label class="form-check-label" for="flexCheckDefault">
                   Acepto los términos y condiciones
@@ -551,5 +545,9 @@
           </div>
 
   <?php require_once('componentes/scripts.php'); ?>
+  <script>
+       var baseurl = "<?= base_url(); ?>";
+  </script>
+  <script src="<?= base_url(); ?>/scripts/pqrs.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
     <?php require_once('componentes/head.php'); ?>
 
 </head>
-<body>
+<body style="background-color: white;">
 <div class="container">
       <div class="row mt-4">
         <div class="col-md-5">

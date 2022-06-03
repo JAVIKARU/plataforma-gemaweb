@@ -1,0 +1,129 @@
+CRITICAL - 2022-06-02 11:13:32 --> Undefined property: App\Controllers\Pqrs::$pqrs
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 54)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->buscarAfiliado()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-02 11:15:13 --> Too few arguments to function App\Models\Pqrsf::buscarAfiliado(), 0 passed in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php on line 54 and exactly 2 expected
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(54): App\Models\Pqrsf->buscarAfiliado()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->buscarAfiliado()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-02 11:57:59 --> Undefined property: App\Controllers\Pqrs::$pqrs
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 54)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->buscarAfiliado()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-02 15:32:57 --> Undefined property: App\Controllers\Pqrs::$Generic
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 60)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-02 15:33:17 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(60): CodeIgniter\Model->__call('generultimoCons...', Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-06-02 15:34:47 --> Unsupported operand types: string + int
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(60): App\Models\Generic->ultimoConsecutivo()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-02 15:38:44 --> Attempt to read property "CONSECUTIVO" on array
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 60)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-02 15:39:00 --> Attempt to read property "CONSECUTIVO" on array
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 60)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-02 15:39:43 --> Array to string conversion
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 60)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-02 15:54:25 --> Undefined array key "archivo"
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Models\Pqrsf.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 43)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(119): App\Models\Pqrsf->crearPqrs(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-02 15:54:41 --> Undefined array key "archivo"
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Models\Pqrsf.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 43)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(119): App\Models\Pqrsf->crearPqrs(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-02 15:58:42 --> Undefined array key "cod_area"
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Models\Pqrsf.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(119): App\Models\Pqrsf->crearPqrs(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-02 15:59:03 --> Undefined array key "cod_area"
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Models\Pqrsf.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(119): App\Models\Pqrsf->crearPqrs(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-02 15:59:07 --> Undefined array key "cod_area"
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Models\Pqrsf.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(119): App\Models\Pqrsf->crearPqrs(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-06-02 16:02:01 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Los datos de cadena o binarios se truncarían.
+CRITICAL - 2022-06-02 16:02:01 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Los datos de cadena o binarios se truncarían.
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Database\BaseConnection.php(670): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "ge...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "ge...')
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO "ge...', Array, false)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Models\Pqrsf.php(61): CodeIgniter\Database\BaseBuilder->insert(Array)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(119): App\Models\Pqrsf->crearPqrs(Array)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-06-02 16:15:33 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Los datos de cadena o binarios se truncarían.
+CRITICAL - 2022-06-02 16:15:33 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Los datos de cadena o binarios se truncarían.
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Database\BaseConnection.php(670): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "ge...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "ge...')
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO "ge...', Array, false)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Models\Pqrsf.php(61): CodeIgniter\Database\BaseBuilder->insert(Array)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(121): App\Models\Pqrsf->crearPqrs(Array)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

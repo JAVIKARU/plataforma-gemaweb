@@ -39,7 +39,9 @@ $routes->get('/recuperarcontrasena', 'Login::viewRecuperar');
 
 $routes->group('pqrs',function ($routes){
     $routes->get('/', 'Pqrs::index');
-    $routes->get('buscar', 'Pqrs::BuscarPqrs');
+    $routes->post('buscarafiliado', 'Pqrs::buscarAfiliado');
+    $routes->post('crearpqrs', 'Pqrs::crearPqrs');
+    $routes->get('buscar', 'Pqrs::buscarPqrs');
 });
 
 
@@ -61,7 +63,6 @@ $routes->group('gemaweb/contrareferencia',function ($routes){
 
 $routes->group('gemaweb/altocosto',function ($routes){
     $routes->get('/', 'Altocosto::index');
-   
 });
 /*
  * --------------------------------------------------------------------

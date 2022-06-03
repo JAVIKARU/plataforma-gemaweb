@@ -8,11 +8,12 @@ class Generic extends Model {
 
     //CONSULTA ENCARGADA DE RETORNAR LOS TIPOS DE DOCUMENTOS
     public function getTiposDocumentos() {
-        $db = \Config\Database::connect();
-        $tpdocumentos = $db->query("SELECT * FROM TIPOS_DOCUMENTOS WHERE EST_DOCUMENTO = 0");
+      $db = \Config\Database::connect();
+      $tpdocumentos = $db->query("SELECT * FROM TIPOS_DOCUMENTOS WHERE EST_DOCUMENTO = 0");
 
-        return  $tpdocumentos;
+      return  $tpdocumentos;
     }
+
     //CONSULTA ENCARGADA DE RETORNAR EL GRUO DE POBLACION
     public function grupoPoblacion() {
       $db = \Config\Database::connect();
@@ -20,6 +21,7 @@ class Generic extends Model {
 
       return $grupoPoblacion;
     }
+
     //CONSULTA ENCARGADA DE RETORNAR LOS GRUPOS ETNICOS
     public function grupoEtnico() {
       $db = \Config\Database::connect();
@@ -27,6 +29,7 @@ class Generic extends Model {
 
       return $grupoEtnico;
     }
+
     //CONSULTA ENCARGADA DE RETORNAR TODOS LOS DEPARTAMENTOS
     public function departamentos() {
       $db = \Config\Database::connect();
@@ -63,6 +66,7 @@ class Generic extends Model {
 
       return  $zonas;
     }
+
     //CONSULTA ENCARGADA DE RETORNAR TODOS LOS TIPOS DE SEXO
     public function getTiposSexos() {
         $db = \Config\Database::connect();
@@ -70,6 +74,7 @@ class Generic extends Model {
 
         return  $sexos;
     }
+
     //CONSULTA ENCARGADA DE RETORNAR TODOS LOS DIAGNOSTICOS
     public function getDiagnosticos() {
       $db = \Config\Database::connect();
@@ -79,9 +84,27 @@ class Generic extends Model {
     }
     //CONSULTA ENCARGADA DE RETORNAR TODOS LOS PROCEDIMIENTOS
     public function getProcedimientos() {
-        $db = \Config\Database::connect();
-        $procedimientos = $db->query("SELECT * FROM PROCEDIMIENTOS");
+      $db = \Config\Database::connect();
+      $procedimientos = $db->query("SELECT * FROM PROCEDIMIENTOS");
 
-        return  $procedimientos;
-      }
+      return  $procedimientos;
+    }
+
+    public function ultimoConsecutivo() {
+      $db = \Config\Database::connect();
+      $builder = $db->table("QUEJAS");
+      $builder->selectMax("CONSECUTIVO") ;
+      $query = $builder->get();
+
+      return $query->getResult();
+    }
+
+    //METODO ENCARGADO DE ACTUALIZAR LOS CONSECUTIVOS DE LA EPSI
+    public function actualizarConsecutivo($tipo, $consecutivo) {
+      $db = \Config\Database::connect();
+      $builder = $db->table("CONSECUTIVOS");
+      $builder->set("CON_RADICACION", $consecutivo);
+      $builder->where("TIP_RADICACION", $tipo);
+      $builder->update();
+    }
 }
