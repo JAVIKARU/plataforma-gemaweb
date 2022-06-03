@@ -93,4 +93,20 @@ class Pqrsf extends Model {
       ];
       $builder->insert($datos);
     }
+
+    //METODO ENCARGADO DE BUSCAR EN LA BASE DE DATOS LA PQRS
+    public function buscarPrsf($tpdocumento, $documento, $consecutivo) {
+      $db= \Config\Database::connect();
+      $builder = $db->table("QUEJAS q");
+      $builder->select("q.DETALLE, q.SOL_ESPERADA, q.PRI_NOMBRE, q.SEG_NOMBRE, q.PRI_APELLIDO, q.SEG_APELLIDO, q.CELULAR1, q.CORREOEMAIL, q.DIRECCION, q.FECHA_REGISTRO, q.DOCUMENTO_RESPUESTA, t.DES_SOLUCION, e.DES_EST_QUEJA");
+      $builder->join("TRAMITE_QUEJAS t", "q.CONSECUTIVO = t.CONSECUTIVO");
+      $builder->join("ESTADOS_QUEJA e", "q.COD_ESTADO = e.COD_EST_QUEJA");
+      $builder->where("q.TP_DOC_AFI", $tpdocumento);
+      $builder->where("q.NM_DOC_AFI", $documento);
+      $builder->where("q.CONSECUTIVO", $consecutivo);
+      $builder->orderBy("t.ID_TRANSACCION", "ASC");
+      $query = $builder->get();
+
+      return $query;
+    }
 }

@@ -25,7 +25,7 @@
         <div class="form-group">
           <label>Tipo documento</label>
           <select
-            id="tpdocumento"
+            id="tpdocumento2"
             class="form-control form-control-sm"
             required aria-label=""
           >
@@ -41,11 +41,10 @@
           <label>Documento</label>
           <input
             type="number"
-            id="documento"
+            id="documento2"
             min="3"
             max="10"
             class="form-control form-control-sm"
-            v-model="documento"
           >
         </div>
       </div>
@@ -64,7 +63,6 @@
         <button
           class="btn btn-primary btn-sm mt-2"
           id="btn-consultar"
-          @click="BuscarPqrs"
         > CONSULTAR
           <i class="fas fa-search"></i>
         </button>
@@ -197,6 +195,11 @@
         acepta la remisión de la PQRD a Pijaos Salud EPSI. En la opción SEGUIMIENTO DE PQRD podrá verificar el estado de la respuesta.
       </p>
     </div>
-<?php require_once('componentes/scripts.php'); ?>
+  <?php require_once('componentes/scripts.php'); ?>
+  <script>
+    var baseurl = "<?= base_url(); ?>";
+  </script>
+  <script src="<?= base_url(); ?>/scripts/pqrs.js"></script>
+
 </body>
 </html>

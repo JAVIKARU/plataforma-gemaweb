@@ -14,7 +14,7 @@ class Generic extends Model {
       return  $tpdocumentos;
     }
 
-    //CONSULTA ENCARGADA DE RETORNAR EL GRUO DE POBLACION
+    //CONSULTA ENCARGADA DE RETORNAR EL GRUPO DE POBLACION
     public function grupoPoblacion() {
       $db = \Config\Database::connect();
       $grupoPoblacion = $db->query("SELECT * FROM POBLACIONESPECIAL_PQRSF ORDER BY NOMPOBLACION ASC");

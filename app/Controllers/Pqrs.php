@@ -12,7 +12,6 @@ class Pqrs extends BaseController {
         //CARGAR LOS MODELOS A LA CLASE PRINCIPAL PARA REUTILIZAR EL CODIGO
         $this->generic = new Generic();
         $this->pqrsf = new Pqrsf;
-
         //CARGAR LOS CONTROLADORES A LA CLASE PRINCIPAL PARA HACER USO DE ELLO
         $this->googledrive = new Googledrive();
     }
@@ -42,7 +41,7 @@ class Pqrs extends BaseController {
     }
 
     //METODO ENCARGADO DE MOSTRAR LAS VISTAS DE BUSQUEDA PQRS
-    public function buscarPqrs() {
+    public function viewBuscarPqrs() {
         $tpdocumentos = $this->generic->getTiposDocumentos();
         $data = [
             "tpdocumento" => $tpdocumentos
@@ -130,5 +129,21 @@ class Pqrs extends BaseController {
           "consecutivo" => $consecutivo,
           "archivo" => $archivo
         ]);
+    }
+    //METODO ENCARGADO DE LA BUSQUEDA DA LA PQRSF
+    public function buscarPrsf() {
+      $tpdocumento = $this->request->getPost("tpdocumento");
+      $documento = $this->request->getPost("documento");
+      $radicado = $this->request->getPost("radicado");
+
+      $pqrs = $this->pqrsf->buscarPrsf($tpdocumento, $documento, $radicado)->getResult();
+      if(count($pqrs) > 0){
+        echo json_encode([
+         'pqrs' => $pqrs
+        ]);
+      }
+      else {
+        echo "error";
+      }
     }
 }

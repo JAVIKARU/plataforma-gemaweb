@@ -285,3 +285,499 @@ CRITICAL - 2022-06-03 09:27:49 --> require_once(./public/api-google/vendor/autol
 #8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #10 {main}
+CRITICAL - 2022-06-03 11:00:28 --> count(): Argument #1 ($value) must be of type Countable|array, CodeIgniter\Database\SQLSRV\Result given
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(138): count(Object(CodeIgniter\Database\SQLSRV\Result))
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->buscarPrsf()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-03 11:01:30 --> count(): Argument #1 ($value) must be of type Countable|array, CodeIgniter\Database\SQLSRV\Result given
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(138): count(Object(CodeIgniter\Database\SQLSRV\Result))
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->buscarPrsf()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-03 11:50:03 --> Too few arguments to function App\Models\Pqrsf::buscarPrsf(), 0 passed in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php on line 140 and exactly 3 expected
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(140): App\Models\Pqrsf->buscarPrsf()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->buscarPrsf()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-03 11:50:55 --> Too few arguments to function App\Models\Pqrsf::buscarPrsf(), 0 passed in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php on line 140 and exactly 3 expected
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(140): App\Models\Pqrsf->buscarPrsf()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->buscarPrsf()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-03 14:55:15 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(98): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/jpeg', 'baby-groot-4k-h...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 14:55:15 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 15:01:52 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(97): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/webp', 'casa-kame-de-dr...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 15:01:52 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 15:02:21 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(97): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/webp', 'casa-kame-de-dr...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 15:02:21 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 15:03:05 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(97): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/jpeg', 'baby-groot-4k-h...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 15:03:05 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 15:04:22 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(97): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/webp', 'casa-kame-de-dr...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 15:04:22 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 15:05:26 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(96): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/jpeg', 'baby-groot-4k-h...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 15:05:26 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 15:13:51 --> Too few arguments to function App\Controllers\Googledrive::subirArchivoDrive(), 0 passed in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php on line 832 and exactly 3 expected
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Googledrive->subirArchivoDrive()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Googledrive))
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-03 15:14:06 --> file_get_contents(./fondo.png): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(32): file_get_contents('./fondo.png')
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Googledrive->subirArchivoDrive()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Googledrive))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-03 15:15:06 --> file_get_contents(./fondo.png): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(32): file_get_contents('./fondo.png')
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Googledrive->subirArchivoDrive()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Googledrive))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-03 15:17:42 --> file_get_contents(./fondo.png): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(32): file_get_contents('./fondo.png')
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Googledrive->subirArchivoDrive()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Googledrive))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-03 15:18:50 --> file_get_contents(../fondo.png): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(32): file_get_contents('../fondo.png')
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Googledrive->subirArchivoDrive()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Googledrive))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-03 15:18:54 --> file_get_contents(../fondo.png): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(32): file_get_contents('../fondo.png')
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Googledrive->subirArchivoDrive()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Googledrive))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-03 15:18:54 --> file_get_contents(../fondo.png): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(32): file_get_contents('../fondo.png')
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Googledrive->subirArchivoDrive()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Googledrive))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-03 15:18:56 --> file_get_contents(../fondo.png): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(32): file_get_contents('../fondo.png')
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Googledrive->subirArchivoDrive()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Googledrive))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-03 15:18:58 --> file_get_contents(../fondo.png): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(32): file_get_contents('../fondo.png')
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Googledrive->subirArchivoDrive()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Googledrive))
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-06-03 15:20:48 --> Too few arguments to function App\Controllers\Googledrive::subirArchivoDrive(), 0 passed in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php on line 832 and exactly 3 expected
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Googledrive->subirArchivoDrive()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Googledrive))
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-03 15:21:47 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(96): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/jpeg', 'desktop_2b7c6e0...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 15:21:47 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 15:51:23 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(96): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/webp', 'casa-kame-de-dr...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 15:51:23 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 15:53:26 --> Too few arguments to function App\Controllers\Googledrive::subirArchivoDrive(), 0 passed in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php on line 832 and exactly 3 expected
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Googledrive->subirArchivoDrive()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Googledrive))
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-06-03 15:54:14 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(96): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/webp', 'casa-kame-de-dr...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 15:54:14 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 15:55:31 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(96): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/webp', 'casa-kame-de-dr...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 15:55:31 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 15:56:56 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(96): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/jpeg', 'baby-groot-4k-h...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 15:56:56 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 15:57:41 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(96): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/jpeg', 'baby-groot-4k-h...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 15:57:41 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 15:57:50 --> require_once(./public/api-google/vendor/autoload.php): Failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(./...', 'C:\\xampp\\htdocs...', 8)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(8): require_once()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Autoloader\Autoloader.php(264): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(809): App\Controllers\Pqrs->__construct()
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-06-03 15:58:12 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(34): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(96): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/webp', 'casa-kame-de-dr...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 15:58:12 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 16:18:55 --> require_once(./public/api-google/vendor/autoload.php): Failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(./...', 'C:\\xampp\\htdocs...', 8)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(8): require_once()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Autoloader\Autoloader.php(264): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(809): App\Controllers\Pqrs->__construct()
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-06-03 16:23:59 --> require_once(/path/to/your-project/vendor/autoload.php): Failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(/p...', 'C:\\xampp\\htdocs...', 8)
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(8): require_once()
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Autoloader\Autoloader.php(264): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(809): App\Controllers\Pqrs->__construct()
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-06-03 16:24:32 --> Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./public/json/soportespqrs-b184d062e113.json does not exist
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\auth\src\ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(1244): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(436): Google\Client->createApplicationDefaultCredentials()
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Client.php(911): Google\Client->authorize()
+#4 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#5 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\vendor\google\apiclient-services\src\Drive\Resource\Files.php(101): Google\Service\Resource->call('create', Array, 'Google\\Service\\...')
+#6 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Googledrive.php(35): Google\Service\Drive\Resource\Files->create(Object(Google\Service\Drive\DriveFile), Array)
+#7 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\app\Controllers\Pqrs.php(96): App\Controllers\Googledrive->subirArchivoDrive('C:\\xampp\\tmp\\ph...', 'image/webp', 'casa-kame-de-dr...')
+#8 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Pqrs->crearPqrs()
+#9 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pqrs))
+#10 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-06-03 16:24:32 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(DomainException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

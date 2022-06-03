@@ -39,24 +39,28 @@ $routes->get('/recuperarcontrasena', 'Login::viewRecuperar');
 
 $routes->group('pqrs',function ($routes){
     $routes->get('/', 'Pqrs::index');
+    $routes->get('buscar', 'Pqrs::viewBuscarPqrs');
     $routes->post('buscarafiliado', 'Pqrs::buscarAfiliado');
     $routes->post('crearpqrs', 'Pqrs::crearPqrs');
-    $routes->get('buscar', 'Pqrs::buscarPqrs');
+    $routes->post('buscarpqrs', 'Pqrs::buscarPrsf');
 });
 
-
+$routes->get("/drive","Googledrive::subirArchivoDrive");
 
 /*
 * --------------------------------------------------------------------
 * RUTAS PARA LA ADMINISTRACION
 * --------------------------------------------------------------------
 */
+//RUTAS PARA EL MODULO DE INICIO
 $routes->get('/gemaweb/inicio', 'Inicio::index');
 
+//RUTAS PARA EL MODULO DE USUARIOS
 $routes->group('gemaweb/usuarios',function ($routes){
     $routes->get('/', 'Usuarios::index');
 });
 
+//RUTAS PARA EL MODULO DE CONTRAREFERENCIA
 $routes->group('gemaweb/contrareferencia',function ($routes){
     $routes->get('/', 'Contrareferencia::index');
 });
