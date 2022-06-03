@@ -34,11 +34,14 @@
                  id="archivo"
                  name="archivo"
                  accept=".txt"
-                 @change="leerArchivo"
                 />
            </div>
            <div class="form-group">
-               <button class="btn btn-default btn-md">Estructura</button>
+              <button 
+                class="btn btn-default btn-md"
+                id="btn-Estructura"
+                >Estructura
+              </button>
                <button class="btn btn-outline-danger btn-md" disabled>Validar</button>
            </div>
        </div>
@@ -141,5 +144,6 @@
         </div>
     <?php require_once("componentes/footer.php"); ?>
     <?php require_once("componentes/scripts.php"); ?>
+    <script src="<?php echo base_url(); ?>/scripts/altoCosto.js"></script>
 </body>
 </html>
