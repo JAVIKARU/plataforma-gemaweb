@@ -45,9 +45,9 @@ $routes->group('pqrs',function ($routes){
     $routes->post('buscarpqrs', 'Pqrs::buscarPrsf');
 });
 
-$routes->get("/drive","Googledrive::subirArchivoDrive");
-$routes->get("/email","Googledrive::subirArchivoDrive");
-
+// $routes->get("/drive","Googledrive::subirArchivoDrive");
+// $routes->get("/email","Googledrive::subirArchivoDrive");
+$routes->get('/enviarcorreo', 'Email::enviarEmail');
 /*
 * --------------------------------------------------------------------
 * RUTAS PARA LA ADMINISTRACION
@@ -55,6 +55,7 @@ $routes->get("/email","Googledrive::subirArchivoDrive");
 */
 //RUTAS PARA EL MODULO DE INICIO
 $routes->get('/gemaweb/inicio', 'Inicio::index');
+
 
 //RUTAS PARA EL MODULO DE USUARIOS
 $routes->group('gemaweb/usuarios',function ($routes){

@@ -1,0 +1,16 @@
+ERROR - 2022-06-06 09:14:56 --> Email: sendWithSmtp throwed stream_socket_enable_crypto(): SSL/TLS already set-up for this stream
+ERROR - 2022-06-06 09:17:27 --> Email: sendWithSmtp throwed stream_socket_enable_crypto(): SSL/TLS already set-up for this stream
+ERROR - 2022-06-06 09:18:53 --> Email: sendWithSmtp throwed stream_socket_enable_crypto(): SSL/TLS already set-up for this stream
+ERROR - 2022-06-06 09:19:07 --> Email: sendWithSmtp throwed stream_socket_enable_crypto(): SSL/TLS already set-up for this stream
+ERROR - 2022-06-06 09:26:10 --> Email: sendWithSmtp throwed fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1408F10B:SSL routines:ssl3_get_record:wrong version number
+ERROR - 2022-06-06 09:27:11 --> Email: sendWithSmtp throwed fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1408F10B:SSL routines:ssl3_get_record:wrong version number
+ERROR - 2022-06-06 09:40:49 --> Email: sendWithSmtp throwed fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1408F10B:SSL routines:ssl3_get_record:wrong version number
+CRITICAL - 2022-06-06 10:14:57 --> Too few arguments to function App\Controllers\Email::enviarEmail(), 0 passed in C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php on line 832 and exactly 2 expected
+#0 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(832): App\Controllers\Email->enviarEmail()
+#1 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Email))
+#2 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\CODEIGNITER\plataforma-gemaweb\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\Generic;
 use App\Models\Pqrsf;
 use App\Controllers\Googledrive;
+use App\Controllers\Email;
 class Pqrs extends BaseController {
 
     public function __construct(){
@@ -14,6 +15,8 @@ class Pqrs extends BaseController {
       $this->pqrsf = new Pqrsf;
       //CARGAR LOS CONTROLADORES A LA CLASE PRINCIPAL PARA HACER USO DE ELLO
       $this->googledrive = new Googledrive();
+      //CARGAR EL CONTROLADOR PARA EL ENVIO DE CORREO ELECTRONICO
+      $this->email = new Email();
     }
 
     //METODO ENCARGADO DE MOSTRAR LA VISTA PRINCIPAL DE PQRS
@@ -123,6 +126,43 @@ class Pqrs extends BaseController {
       $this->pqrsf->crearPqrs($datos);
       $this->generic->actualizarConsecutivo("QUE", $consecutivo);
       $this->pqrsf->crearNovedades($datos);
+
+      //DATOS PARA EL ENVIO DE CORREO ELECTRONICO
+      $asunto = "Radicacion de PQRS Pagina Web";
+      $correointerno = "siau.tolima@pijaossalud.com.co";
+      //$correointerno = "jerson.galvez@pijaossalud.com.co";
+      $mensaje = '<div class="container-border" style=" border: 2px solid #2332CE;width: 700px !important;margin-left: 400px;padding: 10px;border-radius: 20px;z-index: 10;">
+       <div class="container-fluid color-blue" style="border-radius: 10px;background-color: #2332CE !important;"><br><br><br><br></div><br><br>
+       <div class="container center" style="margin-left: 40px;">
+       <img src="https://saludmadreymujer.com/archivos/img/logo.png" width="90px" height="90px" style="margin-left: 250px ;">
+       <br>
+       <br>
+       <p>¿Cómo vas?</p>
+       <p>Te contamos que recibimos una solicitud de PQRSF '.$pqrs.'</p>
+       <p>Expuesta para la EPSI o/y IPS con los siguientes datos.</p>
+       </div>
+       <div class="container" style="margin-left: 40px;">
+       <h4>PQRS EXPUESTA POR EL USUARIO<span> '.$pnombre.' '.$snombre.' '.$papellido . ' '.$sapellido.'</span> </h4>
+       <h5>NUMERO DE RADICADO: '.$consecutivo.'</h5>
+       <h5>TIPO DE DOCUMENTO: '.$tpdocumento.'</h5>
+       <h5>NUMERO DE DOCUMENTO: '.$documento.'</h5>
+       <h5>NUMERO TELEFONICO: '.$telefono.' '.$celular.'</h5>
+       <h5>CORREO ELECTRONICO: '.$correo.' </h5>
+       </div>
+       <div class="container" style=" padding-left: 40px;" width="200px;" >
+       <h3>MENSAJE</h3>
+       <P> '.$descripcion.'</P>
+       </div>
+       <div class="container">
+       <img src="https://saludmadreymujer.com/archivos/img/pqrs.png" width="400px;">
+       </div>
+       <div class="container-fluid color-blue" style="border-radius: 10px;">
+       <br><br><br><br>
+       </div>
+       </div>
+      ';
+      $this->email->enviarEmail($correo, $correointerno, $asunto, $mensaje);
+
       echo json_encode([
         "consecutivo" => $consecutivo,
         "archivo" => $archivo
