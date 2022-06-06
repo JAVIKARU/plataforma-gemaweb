@@ -136,7 +136,7 @@
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-              <a class="nav-link" href="<?= base_url(); ?>/gemaweb/contrareferencia">
+              <a class="nav-link" href="<?= base_url(); ?>/gemaweb/altocosto">
                 Artristis
               </a>
               <!-- 

@@ -16,7 +16,7 @@
             <div class="col">
               <div class="card shadow border-0">
               <div class="container-fluid">
-       <h2 class="p-3">Enfermedad de Alto Costo Cancer</h2>
+       <h2 class="p-3" id="tituloEnfermedad">Enfermedad de Alto Costo</h2>
       <div class="row">
        <div class="col-md-5">
            <div class="text-center mt-5">
@@ -24,7 +24,15 @@
            </div>
            <div class="form-group">
                <label>Enfermedad</label>
-               <input type="text" class="form-control" value="Cancer" readonly />
+               <!-- <input type="text" class="form-control" value="Cancer" readonly /> -->
+               <select Class="form-control" aria-label="Default select example" name="mallaEnfermdedad" id="mallaEnfermdedad" >
+                <option selected>Seleccione...</option>
+                 <option value="Artritis">Artritis</option>
+                 <option value="Cancer">Cancer</option>
+                 <option value="ERC">ERC</option>
+                 <option value="Hemofilia">Hemofilia</option>
+                 <option value="VIH">VIH</option>
+               </select>
            </div>
            <div class="form-group">
                <label>Archivo</label>
@@ -116,21 +124,11 @@
           >
             <br>
             <ol>
-              <li> Resolución Cancer 2014
-                <a
-                  href="https://saludmadreymujer.com/archivos/pdf/resolucion_000247_de_2014_Cancer.pdf"
-                  target="_blank"
-                >
-                  Ver archivo
-                </a>
+              <li id="resulucionText"> Resolucion 
+                
               </li>
-              <li> Instructivo Cancer  2022
-                <a
-                  href="https://saludmadreymujer.com/archivos/pdf/220221_Versión 2_Instructivo_cancer_2022_Publicar.pdf"
-                  target="_blank"
-                >
-                  Ver archivo
-                </a>
+              <li id="instructivoText"> Instructivo 
+               
               </li>
             </ol>
           </div>
