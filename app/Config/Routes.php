@@ -46,6 +46,7 @@ $routes->group('pqrs',function ($routes){
 });
 
 $routes->get("/drive","Googledrive::subirArchivoDrive");
+$routes->get("/email","Googledrive::subirArchivoDrive");
 
 /*
 * --------------------------------------------------------------------
